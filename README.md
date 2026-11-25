@@ -16,7 +16,9 @@ liquidated trader laugh instead of cry.
 `main.py` (Python standard library only) deterministically writes the single
 fortune line, as plain UTF-8 text, to `/output/entry.txt`. There is no
 randomness, no network access, and no input: every run produces the exact
-same bytes. `entry.txt` at the repository root holds the same line.
+same bytes (verified: two runs byte-identical). It exits 0 on success, and
+exits 1 with a clear error if the output path is a directory. `entry.txt`
+at the repository root holds the same line.
 
 ## Run it
 
